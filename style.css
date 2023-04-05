@@ -19,6 +19,7 @@ p {
 /*Top section Starts*/
 .top {
     background-image: url(../huddle-landing-page-with-alternating-feature-blocks-master/images/bg-hero-desktop.svg);
+    background-color: hsla(180, 100%, 50%, 0.057);
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 3%;
@@ -29,6 +30,7 @@ p {
 .navigation {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .hero {
@@ -45,7 +47,10 @@ p {
 .tabs-template {
     width: 58%;
 }
+/*Top section Ends------*/
 
+
+/*Button section Starts--*/
 .navigation-button {
     height: 3rem;
     width: 10rem;
@@ -65,5 +70,4 @@ p {
     border-radius: 1.5rem;
     border: 0;
 }
-
-/*Top section Ends*/
+/*Button section Ends------*/

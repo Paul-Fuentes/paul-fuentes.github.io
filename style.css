@@ -1,3 +1,5 @@
+/*CSS Reset------*/
+
 html, body, div, span, applet, object, iframe, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
@@ -6,15 +8,22 @@ html, body, div, span, applet, object, iframe, blockquote, pre, a, abbr, acronym
     font: inherit;
   }
 
+/*General section starts---*/
+body {
+    --gray-p: hsl(208, 11%, 55%);
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: "Poppins";
-    color: rgb(44, 43, 74);
+    color: hsl(192, 100%, 9%)
 }
 
 p {
     font-family: "Open Sans";
     line-height: 1.7rem;
 }
+/*General section Ends---*/
+
 
 /*Top section Starts*/
 .top {
@@ -24,7 +33,7 @@ p {
     padding-right: 5%;
     padding-top: 3%;
     padding-bottom: 3%;
-
+    margin-bottom: 7%;
 }
 
 .navigation {
@@ -71,3 +80,40 @@ p {
     border: 0;
 }
 /*Button section Ends------*/
+
+
+/*Benefits section Starts----*/
+.sections {
+    display: grid;
+    margin-bottom: 7%;
+}
+
+.section {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5% 4%;
+    padding: 2%;
+    box-shadow: 0 0 10px rgba(194, 193, 193, 0.406);
+}
+
+.s2 {
+    flex-direction: row-reverse;
+}
+
+.section-text {
+    margin: 3%;
+    width: 40%;
+}
+
+.section-text p {
+    color: var(--gray-p)
+}
+
+.section img {
+    width: 30%;
+}
+/*Benefits section Ends------*/
+
+
+/*Ready section Starts-----*/
+/*Ready section Ends-------*/

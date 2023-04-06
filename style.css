@@ -18,6 +18,11 @@ h1, h2, h3, h4, h5, h6 {
     color: hsl(192, 100%, 9%)
 }
 
+h3 {
+    font-weight: 1000;
+    font-size: 1.5rem;
+}
+
 p {
     font-family: "Open Sans";
     line-height: 1.7rem;
@@ -79,13 +84,23 @@ p {
     border-radius: 1.5rem;
     border: 0;
 }
+
+.ready-section button {
+    font-size: 1.1rem;
+    font-weight: normal;
+    height: 4rem;
+    width: 20rem;
+    border-radius: 2rem;
+    box-shadow: 2px 2px 5px grey;
+    border: 0;
+}
 /*Button section Ends------*/
 
 
 /*Benefits section Starts----*/
 .sections {
     display: grid;
-    margin-bottom: 7%;
+    margin-bottom: 15%;
 }
 
 .section {
@@ -101,7 +116,7 @@ p {
 }
 
 .section-text {
-    margin: 3%;
+    margin: 5%;
     width: 40%;
 }
 
@@ -115,5 +130,64 @@ p {
 /*Benefits section Ends------*/
 
 
-/*Ready section Starts-----*/
-/*Ready section Ends-------*/
+/*Ready-section Starts-----*/
+.ready-section {
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.ready-section-child {
+    position: absolute;
+    padding: 2rem 5rem;
+    top: -8rem;
+    display: inline-block;
+    box-shadow: 0 0 10px rgba(194, 193, 193, 0.406);
+    background-color: white;
+    text-align: center;
+}
+
+/*Ready-section Ends-------*/
+
+/*Footer section Starts-----*/
+footer{
+    background-color: hsl(192, 100%, 9%);
+    padding-top: 9%;
+    padding-left: 7%;
+    padding-right: 10%;
+    padding-bottom: 4%;
+    color: rgb(211, 211, 211);
+}
+
+footer>img {
+    display: inline-block;
+    background-color: rgb(211, 211, 211);
+    padding: .5rem;
+    border-radius: .5rem;
+}
+
+.flex-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.flex-bottom>img {
+    width: 3rem;
+}
+
+.contact-details{
+    flex-basis: 40%;
+    display: grid;
+    grid-template-columns: 1fr 12fr;
+}
+
+.copyright {
+    text-align: end;
+}
+
+.image-bottom {
+    align-self: center;
+}
+/*Footer section Ends-------*/

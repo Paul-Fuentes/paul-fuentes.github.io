@@ -10,7 +10,8 @@ html, body, div, span, applet, object, iframe, blockquote, pre, a, abbr, acronym
 
 /*General section starts---*/
 body {
-    --gray-p: hsl(208, 11%, 55%);
+    --text-gray-light: #d4d4d4;
+    --text-gray-dark: rgb(121, 119, 119);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -47,6 +48,11 @@ p {
     align-items: center;
 }
 
+.navigation>img {
+    height: auto;
+    max-width: 35%;
+}
+
 .hero {
     display: flex;
     align-items: center;
@@ -55,6 +61,7 @@ p {
 }
 
 .hero-text {
+    margin-top: 15%;
     width: 37%;
 }
 
@@ -64,7 +71,11 @@ p {
 /*Top section Ends------*/
 
 
-/*Button section Starts--*/
+/*Button and links section Starts--*/
+[class*="button"] {
+    cursor: pointer;
+}
+
 .navigation-button {
     height: 3rem;
     width: 10rem;
@@ -73,6 +84,10 @@ p {
     border: 0;
     background-color: white;
     font-weight: bold;
+}
+
+.navigation-button:hover {
+    color: grey;
 }
 
 .start-button {
@@ -87,14 +102,23 @@ p {
 
 .ready-section button {
     font-size: 1.1rem;
-    font-weight: normal;
+    font-weight: bold;
     height: 4rem;
     width: 20rem;
     border-radius: 2rem;
     box-shadow: 2px 2px 5px grey;
     border: 0;
 }
-/*Button section Ends------*/
+
+.start-button:hover, .ready-section>button:hover {
+    background-color:hsla(271, 76%, 53%, 0.451);
+}
+
+.navigation-bottom a:hover {
+    text-decoration: underline;
+}
+
+/*Button and links section Ends------*/
 
 
 /*Benefits section Starts----*/
@@ -121,7 +145,7 @@ p {
 }
 
 .section-text p {
-    color: var(--gray-p)
+    color: var(--text-gray-dark);
 }
 
 .section img {
@@ -157,12 +181,12 @@ footer{
     padding-left: 7%;
     padding-right: 10%;
     padding-bottom: 4%;
-    color: rgb(211, 211, 211);
+    color: var(--text-gray-light)
 }
 
 footer>img {
     display: inline-block;
-    background-color: rgb(211, 211, 211);
+    filter: invert(100%) sepia(10%) saturate(32%) hue-rotate(292deg) brightness(89%) contrast(86%);
     padding: .5rem;
     border-radius: .5rem;
 }
@@ -190,4 +214,178 @@ footer>img {
 .image-bottom {
     align-self: center;
 }
+
+.navigation-bottom {
+    list-style-type: none;
+}
+
+.navigation-bottom a{
+    color: var(--text-gray-light);
+    text-decoration: none;
+}
+
+.navigation-bottom>li:not(:last-child) {
+    margin-bottom: 2rem;
+}
 /*Footer section Ends-------*/
+
+
+/*MOBILE SCREEN STARTS -----*/
+@media only screen and (max-width: 640px) {
+
+    /*General section starts mobile ---*/
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-weight: 1000;
+        font-size: 1.1rem;
+    }
+
+    p {
+        line-height: 1.4rem;
+    }
+    /*General section mobile Ends---*/
+
+
+    /*Top section Starts mobile*/
+    .top {
+        padding-left: 3%;
+        padding-right: 3%;
+        padding-top: 4%;
+        padding-bottom: 5%;
+        margin-bottom: 5%;
+    }
+    
+    .hero {
+        flex-direction: column;
+        gap: 5%;
+        padding-top: 3%;
+    }
+  
+    .hero-text h1 {
+        margin: 10%;
+    }
+
+    .hero-text {
+        width: 90%;
+        text-align: center;
+    }
+    
+    .tabs-template {
+        width: 85%;
+    }
+    /*Top section Ends mobile*/
+
+
+    /*Buttons section Starts mobile--*/
+    .navigation-button {
+        height: 2rem;
+        width: 7rem;
+        border-radius: 1rem;
+        font-weight: bold;
+        font-size: .8rem;
+    }
+
+    .start-button {
+        letter-spacing: .08rem;
+        margin: 1.5rem 0 4rem;
+    }
+
+    .ready-section button {
+        font-size: .8rem;
+        font-weight: normal;
+        height: 2.8rem;
+        width: 14rem;
+        border-radius: 1.4rem;
+        margin: 0;
+    }
+    /*Buttons section Ends mobile------*/
+
+    /*Benefits section Starts mobile----*/
+    .sections {
+        margin-bottom: 8rem;
+    }
+
+    .section {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 6% 5%;
+        padding: 2%;
+    }
+
+    .section-text {
+        margin: 5%;
+        width: 80%;
+        text-align: center;
+    }
+
+    .section img {
+        width: 70%;
+        margin: 4rem 0 2rem 0;
+    }
+    /*Benefits section Ends mobile------*/
+
+
+    /*Ready-section Starts mobile-----*/
+    .ready-section-child {
+        padding: 2rem 1.5rem;
+        top: -6rem;
+        border-radius: 1rem;
+    }
+    /*Ready-section Ends mobile-------*/
+
+    /*Footer section Starts mobile-----*/
+    footer{
+        padding-top: 9rem;
+        padding-left: 3%;
+        padding-right: 5%;
+        padding-bottom: 7%;
+    }
+
+    footer>img {
+        padding-bottom: 1rem;
+        max-width: 50%;
+        height: auto;
+    }
+
+    .flex-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .flex-bottom>img {
+        width: 3rem;
+    }
+
+    .contact-details{
+        display: grid;
+        grid-template-columns: 1fr 8fr;
+    }
+
+    .copyright {
+        text-align: end;
+    }
+
+    .image-bottom {
+        align-self: center;
+    }
+
+    .navigation-bottom{
+
+    }
+
+    .navigation-bottom>li {
+        margin-bottom: 0rem;
+    }
+    /*Footer section Ends mobile-------*/
+}
+/*MOBILE SCREEN ENDS--------*/

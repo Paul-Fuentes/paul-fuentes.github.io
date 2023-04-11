@@ -46,11 +46,35 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .navigation>img {
     height: auto;
     max-width: 35%;
+}
+
+.dropdown__menu {
+    position: relative;
+    left: -10rem;
+    float: right;
+}
+
+.dropdown__menu ul li{
+    position: absolute;
+    list-style-type: none;
+    text-decoration: none;
+    height: 2rem;
+    width: 10rem;
+    border-radius: 1.5rem;
+    border: 1px solid var(--text-gray-dark);
+    background-color: white;
+    text-align: center;
+}
+
+.dropdown__menu ul li a{
+    text-decoration: none;
+    color: var(--text-gray-dark);
 }
 
 .hero {
@@ -75,7 +99,7 @@ p {
     cursor: pointer;
 }
 
-.navigation-button {
+.dropdown__button { 
     height: 3rem;
     width: 10rem;
     border-radius: 1.5rem;
@@ -85,7 +109,11 @@ p {
     font-weight: bold;
 }
 
-.navigation-button:hover {
+.hide {
+    display: none;
+}
+
+.dropdown__button:hover {
     color: grey;
 }
 
@@ -282,7 +310,7 @@ footer>img {
 
 
     /*Buttons section Starts mobile--*/
-    .navigation-button {
+    .dropdown__button {
         height: 2rem;
         width: 7rem;
         border-radius: 1rem;
